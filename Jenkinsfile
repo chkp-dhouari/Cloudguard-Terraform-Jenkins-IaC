@@ -2,15 +2,17 @@ pipeline {
  agent any
  
  stages {
-   stage(‘checkout  dev branch’) {
-     steps {
+   stage(‘checkout’) {
+     
+    steps {
        checkout scm
  
       }
  
     }
  stage(‘ver’) {
-   steps {
+   
+  steps {
  
      sh ‘terraform — version’
  
