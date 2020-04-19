@@ -14,7 +14,7 @@ pipeline {
    
   steps {
  
-      sh "terraform — version"
+      sh "terraform -version"
  
  
        }
