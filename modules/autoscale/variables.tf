@@ -75,11 +75,6 @@ variable "maximum_group_size" {
   description = "The maximum number of instances in the Auto Scaling group"
   default = 10
 }
-variable "target_groups" {
-  type = list(string)
-  description = "(Optional) List of Target Group ARNs to associate with the Auto Scaling group"
-  default = []
-}
 
 // --- Check Point Settings ---
 variable "version_license" {
