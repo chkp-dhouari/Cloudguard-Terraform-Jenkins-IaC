@@ -74,7 +74,8 @@ pipeline {
         steps {
           withAWS(credentials: 'awscreds', region: 'us-east-1'){
              
-             sh "terraform apply --auto-approve"
+            // sh "terraform apply --auto-approve"
+             sh "terraform show"
             
           }
        }
