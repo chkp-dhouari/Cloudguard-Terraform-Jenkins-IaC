@@ -16,7 +16,7 @@ variable "prefix" {
 variable "asg_name" {
   type = string
   description = "Autoscaling Group name"
-  default = "CP-ASG-tf"
+  default = "Cloudguard-ASG"
 }
 
 // --- VPC Network Configuration ---
@@ -47,7 +47,7 @@ variable "configurationTemplate" {
 variable "instances_name" {
   type = string
   description = "Autoscaling group instances name"
-  default = "CP-ASG-gateway-tf"
+  default = "CloudGuard-gateway-tf"
 }
 variable "instance_type" {
   type = string
