@@ -1,5 +1,5 @@
 module "autoscale" {
-  source = "../../modules/autoscale"
+  source = "./modules/autoscale"
 
   // --- Environment ---
   prefix = var.prefix
