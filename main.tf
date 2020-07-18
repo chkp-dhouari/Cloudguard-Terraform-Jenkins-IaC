@@ -1,7 +1,3 @@
-provider "aws" {
-  region = var.region
-}
-
 module "autoscale" {
   source = "../../modules/autoscale"
 
