@@ -51,7 +51,6 @@ resource "aws_autoscaling_group" "asg" {
   min_size = var.minimum_group_size
   max_size = var.maximum_group_size
   load_balancers = aws_elb.proxy_elb.*.name
-  target_group_arns = var.target_groups
   vpc_zone_identifier = var.subnet_ids
   health_check_grace_period = 0
 
