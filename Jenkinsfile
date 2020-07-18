@@ -74,7 +74,7 @@ pipeline {
         steps {
           withAWS(credentials: 'awscreds', region: 'us-east-1'){
              
-             sh "terraform apply -var-file "$privatekey" --auto-approve"
+             sh "terraform apply -var-file="$privatekey" --auto-approve"
             
           }
        }
