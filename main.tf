@@ -17,7 +17,7 @@ module "autoscale" {
   // --- EC2 Instances Configuration ---
   instances_name = var.instances_name
   instance_type = var.instance_type
-  key_name = var.key_name
+
 
   // --- Auto Scaling Configuration ---
   minimum_group_size = var.minimum_group_size
