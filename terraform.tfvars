@@ -21,7 +21,7 @@ instance_type = "c5.xlarge"
 // --- Auto Scaling Configuration ---
 minimum_group_size = 2
 maximum_group_size = 10
-target_groups = ["arn:aws:tg1/abc123", "arn:aws:tg2/def456"]
+
 
 // --- Check Point Settings ---
 version_license = "R80.30-PAYG-NGTP-GW"
