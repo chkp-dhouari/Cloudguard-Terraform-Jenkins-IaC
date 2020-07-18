@@ -3,9 +3,7 @@ variable "region" {
   description = "AWS region"
   default = "us-east-1"
 }
-data "aws_region" "current" {
-  name = var.region
-}
+
 
 // --- Environment ---
 variable "prefix" {
