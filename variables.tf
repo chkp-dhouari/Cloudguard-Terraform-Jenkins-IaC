@@ -52,10 +52,6 @@ variable "instance_type" {
   description = ""
   default = "c5.xlarge"
 }
-variable "key_name" {
-  type = string
-  description = "The EC2 Key Pair name to allow SSH access to the instances"
-}
 
 // --- Auto Scaling Configuration ---
 variable "minimum_group_size" {
