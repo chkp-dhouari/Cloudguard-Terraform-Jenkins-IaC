@@ -62,10 +62,7 @@ module "validate_instance_type" {
   chkp_type = "gateway"
   instance_type = var.instance_type
 }
-variable "key_name" {
-  type = string
-  description = "The EC2 Key Pair name to allow SSH access to the instances"
-}
+
 
 // --- Auto Scaling Configuration ---
 variable "minimum_group_size" {
