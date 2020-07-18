@@ -22,7 +22,6 @@ module "autoscale" {
   // --- Auto Scaling Configuration ---
   minimum_group_size = var.minimum_group_size
   maximum_group_size = var.maximum_group_size
-  target_groups = var.target_groups
 
   // --- Check Point Settings ---
   version_license = var.version_license
