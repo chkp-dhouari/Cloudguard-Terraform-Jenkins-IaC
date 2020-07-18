@@ -5,8 +5,8 @@ prefix = "TEST"
 asg_name = "autoscaling_group"
 
 // --- VPC Network Configuration ---
-vpc_id = "vpc-12345678"
-subnet_ids = ["subnet-abc123", "subnet-def456"]
+vpc_id = "vpc-0f176e052bb5fa932"
+subnet_ids = ["subnet-0a961057ebe4dfff5", "subnet-0a961057ebe4dfff5"]
 
 // --- Automatic Provisioning with Security Management Server Settings ---
 gateways_provision_address_type = "private"
