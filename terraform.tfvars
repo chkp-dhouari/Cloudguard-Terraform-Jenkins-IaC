@@ -1,7 +1,7 @@
 region = "us-east-1"
 
 // --- Environment ---
-prefix = "env1"
+prefix = "TEST"
 asg_name = "autoscaling_group"
 
 // --- VPC Network Configuration ---
