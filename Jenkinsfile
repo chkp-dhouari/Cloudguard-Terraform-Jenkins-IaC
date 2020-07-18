@@ -75,7 +75,7 @@ pipeline {
           withAWS(credentials: 'awscreds', region: 'us-east-1'){
              
             // sh "terraform apply --auto-approve"
-             sh "terraform show"
+             sh "terraform destroy --auto-approve"
             
           }
        }
