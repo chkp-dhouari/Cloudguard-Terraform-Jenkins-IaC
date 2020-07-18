@@ -37,7 +37,7 @@ pipeline {
      
            steps {
              script {
-               def userInput = input(id: 'confirm', message: 'Do you Approve to use this code?', parameters: [ [$class: 'BooleanParameterDefinition', defaultValue: false, description: 'Approve Code', name: 'confirm'] ])
+               def userInput = input(id: 'confirm', message: 'Do you Approve to use this code?', parameters: [ [$class: 'BooleanParameterDefinition', defaultValue: false, description: 'Approve Code to Proceed', name: 'approve'] ])
               }
             }
           }
@@ -49,7 +49,7 @@ pipeline {
                          args '--entrypoint=' }
                        }
         steps {
-            withAWS(credentials: 'awscreds', region: 'us-east-1'){
+           withAWS(credentials: 'awscreds', region: 'us-east-1'){
                
              sh "terraform init --upgrade && terraform plan"
             
@@ -60,7 +60,7 @@ pipeline {
    stage('Terraform plan approval request') {
       steps {
         script {
-          def userInput = input(id: 'confirm', message: 'Do you Approve the Terraform Plan?', parameters: [ [$class: 'BooleanParameterDefinition', defaultValue: false, description: 'Apply terraform', name: 'confirm'] ])
+          def userInput = input(id: 'confirm', message: 'Do you Approve the Terraform Plan?', parameters: [ [$class: 'BooleanParameterDefinition', defaultValue: false, description: 'Confirm to Approve Terraform Plan', name: 'approve'] ])
         }
       }
     }
@@ -71,7 +71,7 @@ pipeline {
                          args '--entrypoint=' }
                        }
         steps {
-            withAWS(credentials: 'awscreds', region: 'us-east-1'){
+          withAWS(credentials: 'awscreds', region: 'us-east-1'){
                
              sh "terraform apply --auto-approve"
             
@@ -82,9 +82,4 @@ pipeline {
   }
 }
 
-//cleanup Jenkins Workspace
-post { 
-  always { 
-    cleanWs()
-   }
-}
+
