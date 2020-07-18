@@ -37,7 +37,7 @@ pipeline {
      
            steps {
              script {
-               def userInput = input(id: 'confirm', message: 'Do you Approve to use this code?', parameters: [ [$class: 'BooleanParameterDefinition', defaultValue: false, description: 'Code use approved', name: 'confirm'] ])
+               def userInput = input(id: 'confirm', message: 'Do you Approve to use this code?', parameters: [ [$class: 'BooleanParameterDefinition', defaultValue: false, description: 'Approve Code', name: 'confirm'] ])
               }
             }
           }
