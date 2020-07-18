@@ -16,7 +16,7 @@ configurationTemplate = "tmpl_env1"
 // --- EC2 Instances Configuration ---
 instances_name = "asg_gateway"
 instance_type = "c5.xlarge"
-key_name = "privatekey"
+#key_name = "privatekey"
 
 // --- Auto Scaling Configuration ---
 minimum_group_size = 2
