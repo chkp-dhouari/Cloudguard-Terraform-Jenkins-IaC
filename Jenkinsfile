@@ -34,6 +34,14 @@ pipeline {
             }
          }
        
+         post {
+          always {
+             mail to: 'dhouari@checkpoint.com',
+             subject: "Code approval request ${currentBuild.fullDisplayName}",
+             body: "Please review and approve code for ${env.BUILD_URL}"
+               }
+           }
+       
          stage('Code approval request') {
      
            steps {
